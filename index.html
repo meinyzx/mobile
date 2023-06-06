@@ -4,50 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro JS</title>
-</head>
-<body>
-     <h1>  Primeiro JavaScript   </h1>
-    <script>
- window. alert('Olá mundo JS!')
-    </script>
-    <!--Exercício 02-->
-<h1>My First Web Page</h1>
-<p>My First Paragraph</p>
-<p id="demo"></p>
-<script>
-document.getElementById("demo").innerHTML=5+6;
-</script>
-<!--Exercício 03-->
-<script>
-document.write(5+6);
-</script>
-<!--Exercício 04-->
-<h2>My First Web Page</h2>
-<p>My First Paragraph</p>
-<button type="button" onclick="document.write(5+6)">
-Try it</button><br><br>
-<!--Exercício 05-->
-<script>
-window.alert(5 + 6);
-</script>
-<!--Exercício 06-->
-<button onclick="window.print()">Print this page</button>
-<!--Exercício 07-->
-<h2>JavaScript Statement</h2>
-<p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed
-by a computer.</p>
-<p id="demo2"></p>
-<script>
-let x, y, z; //statement 1
-x = 5; //statement 2
-y = 6; //statement 3
-z = x + y; //statement 4
-document.getElementById("demo2").innerHTML =
-"The value of z is " + z + ".";
-</script>
-   
-  
-</body>
+    <link rel="stylesheet" href="style.css">
 
+    <title>Formulário padrão</title>
+<!--Script para testar leitura*-->
+    <script>
+        nome1 = window.prompt("Qual seu nome?");
+        if (nome1!=null && nome1!="")
+        {
+            document.write("Olá, "+nome1+"!");
+        }
+        else
+        {
+            document.write("Olá, visitante!");
+        }
+
+        function validar()
+        {
+            if (document.cadastro.nome1.value =="")
+                { window.alert("Você deve preencher o campo nome1.");
+                    document.cadastro.nome1.focus();
+                    return false;
+                }
+            if (document.cadastro.observacoes.value =="")
+                { window.alert("Você deve colocar uma observação...");
+                    document.cadastro.observacoes.focus();
+                    return false;
+                }
+        }
+
+    </script>
+ </head>
+<body>
+   
+    <form action="teste@gmail.com" method="POST" enctype="text/plain" name="cadastro"><br><br>
+    <h2>Prencher os campos:</h2>
+    <input type="text" name="nome" size="40" placeholder="Seu nome...">
+    <input type="text" name="email" size="40" placeholder="Seu email..."><br><br>
+    <h3>Sexo:</h3><br>
+    <input type="radio" name="sexo" value="f">Feminino<br>
+    <input type="radio" name="sexo" value="m">Masculino<br>
+    <input type="radio" name="sexo" value="o">Outro<br><br>
+    <h3>Estado Civil:</h3> <br>
+    <input type="radio" name="civil" value="s">Solteiro<br>
+    <input type="radio" name="civil" value="c">Casado<br>
+    <input type="radio" name="civil" value="d">Divorciado<br><br>
+    <h3>Bens que possui:</h3> <br>
+    <input type="checkbox" name="bens" value="c">Casa<br>
+    <input type="checkbox" name="bens" value="a">Automóvel<br>
+    <input type="checkbox" name="bens" value="m">Moto<br>
+    <input type="checkbox" name="bens" value="p">Apartamento<br>
+    <input type="checkbox" name="bens" value="t">Terreno<br><br>
+    <h3>Faixa de Idade:</h3>
+    <select name="faixaidade">
+        <option value="3a10">3 a 10 anos</option>
+        <option value="11a25">11 a 25 anos</option>
+        <option value="26a35">26 a 35 anos</option>
+        <option value="36a55">36 a 55 anos</option>
+        <option value="56a90">56 a 90 anos</option>
+    </select><br>
+    <h3> Preferido:</h3>
+    <select name="hobby">
+        <option value="livros">Livros</option>
+        <option value="musica">Música</option>
+        <option value="filmes">Filmes</option>
+        <option value="esportes">Esportes</option>
+        <option value="games">Games</option>
+    </select><br><br>
+    Observações Gerais:<br>
+    <textarea name="observacoes" rows="5" cols="55" ></textarea><br>
+
+    <input type="submit" value="Enviar" onclick="validar();">
+    <input type="reset" value="Limpar">
+    </form>   
+    
+</body>
 </html>
