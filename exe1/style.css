@@ -1,0 +1,25 @@
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+    }
+
+script{color: rgb(19, 70, 114);}
+
+h1{color: blue;
+    text-align: center;}
+
+head{
+background-color: aqua;
+
+}
+
+body{ 
+   background-color: rgb(169, 223, 223); 
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center;
+   font-size: 150%;
+   
+}
