@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: rgb(58, 123, 221);
+    margin: 0px;
+   
+    color: rgb(0, 0, 0);}
+
+   input {
+        background-color: rgb(18, 47, 141);
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 5px;
+        transition: all ease 0.3s;
+        width: 15%;
+        margin: 10px;
+   }
+
+   
